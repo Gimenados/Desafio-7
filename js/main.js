@@ -87,8 +87,8 @@ botonMayuscula.addEventListener("click", function() {
 // Botón convertir a minúsculas
 let botonMinuscula = document.querySelector("button");
 botonMinuscula.addEventListener("click", function() {
-    let contenidoText = document.getElementById("destino");
-    contenidoText.innerHTML = contenidoMsg.innerHTML.toLowerCase();
+    let contenidoMsg = document.getElementById("destino");
+    contenidoMsg.innerHTML = contenidoMsg.innerHTML.toLowerCase();
 });
 
 });
