@@ -11,8 +11,8 @@ document.getElementById('origen').value = '<p>Este contenido <strong>está listo
         let entradas = document.getElementsByTagName("input");
         let btn = document.getElementsByTagName("button" )[0]
         
-//        console.log(entradas)
-//        console.log(btn)
+//       console.log(entradas)
+//       console.log(btn)
 
         clickText.addEventListener ("click", function(e){
             habilitar(entradas, btn);
@@ -30,12 +30,12 @@ function habilitar(entradas, btn) {
 //Punto 5 Remplazar
 
 // Variable global para almacenar el valor del textarea
-let destenyTxt = "";
+let destinoTxt = "";
 const textReplace = document.getElementById("btn-reemplazar");
 textReplace.addEventListener("click", function () {
   const origenValue = document.getElementById("origen").value;
-  destenyTxt = origenValue;
-  document.getElementById("destino").innerHTML = destenyTxt;
+  destinoTxt = origenValue;
+  document.getElementById("destino").innerHTML = destinoTxt;
 });
 
 // Todos los Agregar
@@ -46,18 +46,18 @@ function forClass() {
         arrayAgregar[i].addEventListener("click", function(event) {
             switch (i) {
                 case 0:
-                    document.getElementById('destino').innerHTML += destenyTxt.repeat(1);
+                    document.getElementById('destino').innerHTML += destino.repeat(1);
                     break;
                 case 1:
-                    document.getElementById('destino').innerHTML += destenyTxt.repeat(5);
+                    document.getElementById('destino').innerHTML += destinoTxt.repeat(5);
                     break;
                 case 2:
-                    document.getElementById('destino').innerHTML += destenyTxt.repeat(10);
+                    document.getElementById('destino').innerHTML += destinoTxt.repeat(10);
                     break;
                 case 3:
                     let n = prompt("¿Cuántas veces deseas agregar el texto?");
                     if (n !== null) {
-                        document.getElementById('destino').innerHTML += destenyTxt.repeat(parseInt(n));
+                        document.getElementById('destino').innerHTML += destinoTxt.repeat(parseInt(n));
                     }
                     break;
                 default:
